@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: c1f579eb9f68363449ae361a7715ad79
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Glober
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 805b1f00c42cccc438002cce83ebfa68, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

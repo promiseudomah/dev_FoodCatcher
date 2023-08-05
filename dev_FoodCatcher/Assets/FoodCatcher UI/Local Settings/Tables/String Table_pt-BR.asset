@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: String Table_pt-BR
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: pt-BR
+  m_SharedData: {fileID: 11400000, guid: 7f60a4f141d1efa4b9c14db73e91803f, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 5620087808000
+    m_Localized: "MELHOR PONTUA\xC7\xC3O: "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1417143541760
+    m_Localized: TOQUE NA TELA PARA JOGAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7258361978880
+    m_Localized: TOQUE NA TELA PARA CONTINUAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7299885588480
+    m_Localized: "TOQUE NA TELA PARA JOGAR NOVAMENTE\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7354566729728
+    m_Localized: FIM DO JOGO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7398548201472
+    m_Localized: "CONFIGURA\xC7\xD5ES"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7416759869440
+    m_Localized: ESTATISTICAS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7455775285248
+    m_Localized: SOM ON
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7457289428992
+    m_Localized: SOM OFF
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7550176485376
+    m_Localized: JOGOS DISPUTADOS
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 44db78a1179d4e5488318e432d5a0e03
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Glober
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 82070f1f019332047bbbf2cdd95315f7, type: 3}
+  - {fileID: 12800000, guid: b39153baf0b50804280b548ea3681dde, type: 3}
+  - {fileID: 12800000, guid: 805b1f00c42cccc438002cce83ebfa68, type: 3}
+  - {fileID: 12800000, guid: c1f579eb9f68363449ae361a7715ad79, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
