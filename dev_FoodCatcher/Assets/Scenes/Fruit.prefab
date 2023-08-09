@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4916394851829972601}
   - component: {fileID: 4916394851829972604}
   - component: {fileID: 45572311837526854}
+  - component: {fileID: 6167748753074263710}
   m_Layer: 0
-  m_Name: Square
-  m_TagString: Square
+  m_Name: Fruit
+  m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +97,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -124,7 +125,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 0.16630083
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -133,3 +134,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6167748753074263710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4916394851829972600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ab01ded614d4434c852dec9b88faf3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 1
+  rotationSpeed: 100
+  minScale: {x: 0.25, y: 0.25, z: 0.25}
+  maxScale: {x: 1, y: 1, z: 1}

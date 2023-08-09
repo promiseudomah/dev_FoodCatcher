@@ -8,11 +8,7 @@ public class GameManager : MonoBehaviour
 {   
     [Space(10)]
     [Header("Game Manager Screens")]
-    public GameObject PauseScreen;
     public GameObject GameOverScreen;
-
-    [Space(10)]
-    [SerializeField] private bool isPaused = false; // Track the current pause state
 
     [Space(10)]
     public Text Score; // Track the current pause state
@@ -30,10 +26,6 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
-    /// <summary>
-    ///? Load Scene ( 0 - Menu Scene, 1 - Game Scene)
-    /// </summary>
-
     public void LoadMenu(){
         
         Time.timeScale = 1f; 
@@ -43,7 +35,7 @@ public class GameManager : MonoBehaviour
     public void RestartGame(){
 
         AddPlayCounts();
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void AddScore(){
