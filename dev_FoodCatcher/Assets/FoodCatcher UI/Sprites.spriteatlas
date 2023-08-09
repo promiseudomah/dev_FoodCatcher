@@ -61,15 +61,15 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 6cd7d3dffc0781c488217fc1362c88dd, type: 3}
   m_PackedSpriteNamesToIndex:
   - shopping-basket_115095 2
-  - layer1-3
-  - layer1
+  - Carrot
+  - Burger
   - Rectangle 4
-  - layer1-1
-  - layer1-5
-  - layer1-2
-  - Vector (3)
+  - Donut
+  - Pizza
+  - Cherries
+  - Bomb
   - seo-social-web-network-internet_64_icon-icons.com_61485 3
-  - layer1-4
+  - Tomato
   - Line 2
   m_RenderDataMap: {}
   m_Tag: Sprites

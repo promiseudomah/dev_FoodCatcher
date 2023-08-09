@@ -22,8 +22,7 @@ public class MenuManager : MonoBehaviour
     void Awake()
     {
 
-        StartWithMenuEnabled();
-        CheckAchievements();
+        Refresh();
     }
     public void ClickPlay(){
         
@@ -40,36 +39,35 @@ public class MenuManager : MonoBehaviour
 
     void CheckAchievements(){
 
-        foreach (string foodName in FoodNames)
+        for (int i = 0; i < FoodNames.Length; i++)
         {
-            string FOODKEY = foodName + "Count";
+            string FOODKEY = FoodNames[i] + "Count";
 
             if(PlayerPrefs.HasKey(FOODKEY)){
-                
+        
                 int foodCount = PlayerPrefs.GetInt(FOODKEY);
-                Debug.Log($"{FOODKEY}: {foodCount}");
+                int remainingCount = 100 - foodCount;
 
-                foreach (GameObject stampObject in Stamps)
-                {
-                      
-                    if(stampObject.name.Contains(foodName)){
+                Debug.Log($"{FOODKEY}: {foodCount} remainingCount: {remainingCount}");
 
-                        if(foodCount >= 100){
-                            
-                            UpdateAchievements(stampObject);
-                        }
+                if(Stamps[i].name.Contains(FoodNames[i])){
 
-                        else{
+                    if(foodCount >= 100){
+                        
+                        UpdateAchievements(Stamps[i]);
+                    }
 
-                            DefaultAchievements(stampObject);
-                        }
-                    } 
-                }  
-            }
+                    else{
 
+                        DefaultAchievements(Stamps[i]);
+                    }
+                } 
+            }  
+        
             else{
 
                 PlayerPrefs.SetInt(FOODKEY, 0); 
+                
             }
         }
     }
@@ -89,6 +87,7 @@ public class MenuManager : MonoBehaviour
         CanvasGroup cv = stampGameObject.GetComponent<CanvasGroup>();
         Text text = stampGameObject.GetComponentInChildren<Text>();
 
+
         text.color = Color.black;
         cv.alpha = 0.3f;
         cv.interactable = false;
@@ -100,9 +99,6 @@ public class MenuManager : MonoBehaviour
         CheckAchievements();
     }
 
-    void OnEnable()
-    {
-        Refresh();
-    }
+
 
 }

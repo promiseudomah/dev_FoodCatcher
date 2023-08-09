@@ -7,50 +7,57 @@ using UnityEngine.Localization.Settings;
 
 public class LocaleSelector : MonoBehaviour
 {
-    bool active = false;
-    int ID;
+    private bool isActive = false;
+    private int selectedLocaleID;
 
     public ToggleGroup toggleGroup;
-    void Start()
+
+    private void Start()
     {
-        ID = PlayerPrefs.GetInt("LocalKey", 0); 
-        ChangeLocale(ID);
+        selectedLocaleID = PlayerPrefs.GetInt("SelectedLocaleID", 0);
+        ChangeLocale(selectedLocaleID);
     }
 
-    public void ChangeLocale(int localID)
+    public void ChangeLocale(int localeID)
     {
-        if (active == true)
+        if (isActive)
             return;
-        StartCoroutine(SetLocale(localID));
+
+        foreach (Toggle toggle in toggleGroup.GetComponentsInChildren<Toggle>())
+        {
+            int toggleIndex = toggle.transform.GetSiblingIndex();
+            toggle.isOn = toggleIndex == localeID;
+        }
+
+        StartCoroutine(SetLocale(localeID));
     }
 
-    IEnumerator SetLocale(int localID)
+    private IEnumerator SetLocale(int localeID)
     {
-        active = true;
+        isActive = true;
         yield return LocalizationSettings.InitializationOperation;
-        LocalizationSettings.SelectedLocale =
-            LocalizationSettings.AvailableLocales.Locales[localID];
 
-        PlayerPrefs.SetInt("LocalKey", localID);
-        active = false;
+        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[localeID];
+        PlayerPrefs.SetInt("SelectedLocaleID", localeID);
+
+        isActive = false;
     }
 
     public void ToggleLanguage()
     {
-        ID = PlayerPrefs.GetInt("LocalKey", 0);
+        selectedLocaleID = PlayerPrefs.GetInt("SelectedLocaleID", 0);
 
         foreach (Toggle toggle in toggleGroup.ActiveToggles())
         {
-            int toggleID = toggle.transform.GetSiblingIndex();
-            if (toggleID == ID)
+            int toggleIndex = toggle.transform.GetSiblingIndex();
+            if (toggleIndex == selectedLocaleID)
             {
                 Debug.Log("The function is working");
-                return; // The selected language is already active, no need to change.
+                return; // The selected language is already active; no need to change.
             }
-
             else
             {
-                ChangeLocale(toggleID);
+                ChangeLocale(toggleIndex);
             }
         }
     }

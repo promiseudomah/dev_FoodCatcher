@@ -9,11 +9,26 @@ public class GameManager : MonoBehaviour
     [Space(10)]
     [Header("Game Manager Screens")]
     public GameObject GameOverScreen;
+    public GameObject Spawner;
+    public GameObject Player;
 
     [Space(10)]
     public Text Score; // Track the current pause state
     public Text EndScore; // Track the current pause state
     public int scoreCount = 0; // Track the current pause state
+
+    [Space(10)]
+    public ParticleSystem basketSplash;
+
+    [Space(10)]
+    public GameObject bombSplash;
+
+    [Space(10)]
+    public CameraShake cameraShake;
+
+    [Space(10)]
+    public Animator anim;
+
 
     #region Singleton
 
@@ -26,6 +41,13 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
+
+    void Start(){
+
+        Spawner.SetActive(true);
+        GameOverScreen.SetActive(false);
+        Player.SetActive(true);
+    }
     public void LoadMenu(){
         
         Time.timeScale = 1f; 
@@ -47,7 +69,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void GameOver()
-    {
+    {   
         
         SetScore();
         EnableGameOverScreen();
@@ -70,7 +92,9 @@ public class GameManager : MonoBehaviour
     
     void EnableGameOverScreen(){
 
+        Spawner.SetActive(false);
         GameOverScreen.SetActive(true);
+        Player.SetActive(false);
     }
     void AddPlayCounts(){
 

@@ -6,6 +6,7 @@ public class BasketController : MonoBehaviour
     private Vector3 startPosition;
     [SerializeField] private float screenWidth;
 
+
     // Adjust this value to control the basket's speed.
     public float dragSpeed = 0.1f;
 
@@ -38,4 +39,5 @@ public class BasketController : MonoBehaviour
         float newX = Mathf.Clamp(transform.position.x + delta.x * dragSpeed, -screenWidth / 2f, screenWidth / 2f);
         transform.position = new Vector3(newX, transform.position.y, transform.position.z);
     }
+
 }
