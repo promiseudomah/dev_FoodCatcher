@@ -25,7 +25,7 @@ public class FoodObject : MonoBehaviour
         cameraShake = GameManager.Instance.cameraShake;
         playerController = GameManager.Instance.Player.GetComponent<BasketController>();
         playerColor = GameManager.Instance.Player.GetComponent<SpriteRenderer>();
-        playerColor.color = Color.white;
+        
     }
 
     private void Update()

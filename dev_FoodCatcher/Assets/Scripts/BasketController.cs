@@ -2,13 +2,18 @@ using UnityEngine;
 
 public class BasketController : MonoBehaviour
 {
-    [SerializeField] private bool isDragging = false;
+    
     private Vector3 startPosition;
+    [SerializeField] SpriteRenderer spriteRenderer;
+
+    [SerializeField] private bool isDragging = false;
     [SerializeField] private float screenWidth;
-
-
-    // Adjust this value to control the basket's speed.
     public float dragSpeed = 0.1f;
+
+    void Start(){
+
+        spriteRenderer.color = Color.white;
+    }
 
     // Update is called once per frame
     void Update()

@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
 
         Spawner.SetActive(false);
         GameOverScreen.SetActive(true);
-        Player.SetActive(false);
+        //Player.SetActive(false);
     }
     void AddPlayCounts(){
 
